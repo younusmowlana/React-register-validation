@@ -4,15 +4,21 @@ import FormInput from "./components/FormInput";
 
 
 const App = () => {
-  const [username,setusername] = useState('');
+  // const [username,setusername] = useState('');
 
-  console.log(username);
+  const handlesubmit = (e)=>{
+    e.preventDefault();
+    const data = new FormData(e.target)
+    console.log(Object.fromEntries(data.entries()));
+  }
+
+  // console.log(username);
   return <div className="app">
-    <form>
-      <FormInput placeholder="Username" setusername={setusername}/>
-      <FormInput placeholder="Email"/>
-      <FormInput placeholder="Full name"/>
-      <FormInput placeholder="Age"/>
+    <form onSubmit={handlesubmit}>
+      <FormInput name="username" placeholder="Username" />
+      <FormInput name="email" placeholder="Email"/>
+      <FormInput name="fullname" placeholder="Full name"/>
+      <FormInput name="age" placeholder="Age"/>
       <button>Submit</button>
     </form>
 
