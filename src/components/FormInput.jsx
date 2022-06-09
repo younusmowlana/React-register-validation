@@ -4,7 +4,7 @@ const FormInput = (props) => {
   return (
     <div className="forminputs">
         {/* <label>UserName</label> */}
-        <input placeholder={props.placeholder}/>   
+        <input className="input" placeholder={props.placeholder}/>   
     </div>
   )
 }
