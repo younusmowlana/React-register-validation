@@ -12,7 +12,7 @@ const App = () => {
     console.log(Object.fromEntries(data.entries()));
   }
 
-  console.log(username);
+  // console.log(username);
   return <div className="app">
     <form onSubmit={handlesubmit}>
       <FormInput name="username" placeholder="Username" />
